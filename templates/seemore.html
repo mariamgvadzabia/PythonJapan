@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block page_class %}seemore-bg{% endblock %}
+
+{% block body %}
+<div class="wrap">
+  <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/1200x/74/71/74/7471742ab79dc64ba1e1c1644ecf0181.jpg" alt="Tokyo Night">
+      <div class="nn-glow"></div>
+    </div>
+
+    <section class="nn-body">
+      <div class="nnn">FEATURED • SECRETS • TOKYO</div>
+      <h2 class="nn-title">Tokyo - The Culinary Megacity</h2>
+      <p class="nn-text">
+        Tokyo is the "Food Capital" of the world, boasting more Michelin-starred restaurants than Paris and New York combined.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Tokyo Disneyland & DisneySea • TeamLab Borderless</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Tokyo has more registered pets than children under 15!</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+  <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+
+  <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+</div>
+
+    </section>
+  </section>
+
+  <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/736x/48/06/0e/48060eab5a3bae9f56ac66be57d6c42a.jpg" alt="ramen">
+      <div class="nn-glow"></div>
+    </div>
+
+    <section class="nn-body">
+      <div class="nnn">FEATURED • SECRETS • YOKOHAMA</div>
+      <h2 class="nn-title">Yokohama - the port of dreams</h2>
+      <p class="nn-text">
+        It is famous for its original "House-style" ramen, which features a thick, salty, pork-and-soy sauce broth
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Yokohama Chinatown • Minato Mirai 21 • Cup Noodle Museum</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Yokohama is the birthplace of Japanese ice cream! In 1869, the first "Western-style" ice cream, called Aisu-kurin, was produced and sold in the Bashamichi district of Yokohama, marking the start of Japan's obsession with the dessert.</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+
+  <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+          <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+    </div>
+    </section>
+
+  </section>
+
+    <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/1200x/c3/22/4f/c3224f143c8f07d1077a12ed3de23c5d.jpg" alt="Tokyo Night">
+      <div class="nn-glow"></div>
+    </div>
+
+    <section class="nn-body">
+      <div class="nnn">FEATURED • SECRETS • NARA</div>
+      <h2 class="nn-title">Nara - The Cradle of Tradition</h2>
+      <p class="nn-text">
+        Step back in time to Japan’s first permanent capital. Nara is a city where history breathes, filled with ancient temples that have stood for over 1,200 years and sacred nature that remains untouched.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Nara Park • Todai-ji Temple (Great Buddha) • Kasuga Taisha Shrine</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Nara's deer are national treasures! Over 1,200 wild Sika deer roam Nara Park freely. According to local legend, they were considered messengers of the gods. Today, they are so polite that they have learned to "bow" to visitors in exchange for special deer crackers (Shika-senbei)!</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+
+  <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+          <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+      </div>
+    </section>
+  </section>
+    <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/1200x/9e/9c/66/9e9c6611a42a5a4173dfdf3255dfbaaa.jpg" alt="Osaka Dotonbori">
+      <div class="nn-glow"></div>
+    </div>
+    <section class="nn-body">
+      <div class="nnn">FEATURED • STREET FOOD • OSAKA</div>
+      <h2 class="nn-title">Osaka - The Nation's Kitchen</h2>
+      <p class="nn-text">
+        Osaka is famous for its outgoing people and incredible street food, especially in the vibrant Dotonbori district.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Osaka Castle • Dotonbori • Universal Studios Japan</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Osaka is the birthplace of Instant Ramen! The first cup was invented here by Momofuku Ando in 1958.</div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+          <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+      </div>
+    </section>
+  </section>
+
+  <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/1200x/24/80/b4/2480b4811929c3935d0f9ad2c3f96104.jpg" alt="Miyagi Pine Islands">
+      <div class="nn-glow"></div>
+    </div>
+    <section class="nn-body">
+      <div class="nnn">FEATURED • SCENERY • MIYAGI</div>
+      <h2 class="nn-title">Miyagi - The Pine-Clad Coast</h2>
+      <p class="nn-text">
+        Home to Matsushima Bay, celebrated for centuries as one of Japan's three most scenic views.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Matsushima Bay • Zao Fox Village • Sendai Castle Ruins</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Miyagi has a famous "Fox Village" where over 100 foxes roam free and visitors can pet them!</div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+          <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+      </div>
+    </section>
+  </section>
+
+  <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/1200x/7e/69/1b/7e691b70036934897b39280261b544c6.jpg" alt="Motonosumi Shrine">
+      <div class="nn-glow"></div>
+    </div>
+    <section class="nn-body">
+      <div class="nnn">FEATURED • SHRINES • YAMAGUCHI</div>
+      <h2 class="nn-title">Yamaguchi - The Bridge to History</h2>
+      <p class="nn-text">
+        A prefecture of stunning coastal beauty and the iconic red gates of Motonosumi Shrine.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Motonosumi Shrine • Kintai Bridge • Akiyoshi-do Cave</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Motonosumi Shrine has 123 red Torii gates that lead directly to a cliff overlooking the ocean!</div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+          <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+      </div>
+    </section>
+  </section>
+
+  <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/736x/1e/af/66/1eaf668061b83cd21465b40935bbe00a.jpg" alt="Nagasaki Harbor">
+      <div class="nn-glow"></div>
+    </div>
+    <section class="nn-body">
+      <div class="nnn">FEATURED • CULTURE • NAGASAKI</div>
+      <h2 class="nn-title">Nagasaki - Where Worlds Meet</h2>
+      <p class="nn-text">
+        A unique harbor city that served as Japan's only window to the Western world for centuries.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Glover Garden • Mount Inasa • Hashima (Gunkanjima) Island</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Nagasaki has a unique "Chamongas" cuisine, a blend of Japanese, Chinese, and Portuguese flavors!</div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+          <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+      </div>
+    </section>
+  </section>
+
+  <section class="nn">
+    <div class="nn-media">
+      <img src="https://i.pinimg.com/1200x/12/da/30/12da30b8091ffa6d88bdd0b852812d44.jpg" alt="Aomori Nebuta">
+      <div class="nn-glow"></div>
+    </div>
+    <section class="nn-body">
+      <div class="nnn">FEATURED • FESTIVALS • AOMORI</div>
+      <h2 class="nn-title">Aomori - The Spirit of the North</h2>
+      <p class="nn-text">
+        Famous for its mystical forests, volcanic lakes, and the world-renowned Nebuta Matsuri festival.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">MUST-VISIT PLACES</div>
+          <div class="stat-v">Hirosaki Castle • Lake Towada • Nebuta Warasse Museum</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">UNIQUE FACT</div>
+          <div class="stat-v">Aomori produces over half of all apples in Japan! They are famous for being incredibly large and sweet.</div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a class="btn-ghost" href="{{ url_for('explore') }}#destinations">BACK</a>
+          <span class="heart" onclick="toggleHeart(this)">&#10084;</span>
+      </div>
+    </section>
+  </section>
+</div>
+
+{% endblock %}

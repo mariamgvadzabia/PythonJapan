@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <form class="reg" method="POST">
+      {{ form.hidden_tag() }}
+
+      {% for errors in form.errors.values() %}
+        <div class="alert alert-danger" role="alert">
+          {% for error in errors %}
+              * {{ error }}
+          {% endfor %}
+        </div>
+      {% endfor %}
+
+      <div class="regis2">
+
+          <div class="regis-row mt-2">
+              {{ form.username(placeholder="Username", class_="form-control") }}
+          </div>
+
+          <div class="regis-row mt-2">
+              {{ form.password(placeholder="Password", class_="form-control") }}
+          </div>
+
+          <div class="regis-row mt-2">
+              {{ form.submit(class="btn btn-primary", value="Log In") }}
+          </div>
+
+          <div class="mt-3 text-center" style="margin-top: 20px; text-align: center;">
+             <p style="color: rgba(255,255,255,0.7); font-size: 14px;">
+                 DON'T HAVE AN ACCOUNT?
+                 <a href="{{ url_for('register') }}" style="color: #ff0055; font-weight: bold; text-decoration: none; margin-left: 5px;">
+                     Register
+                 </a>
+             </p>
+          </div>
+
+      </div>
+  </form>
+{% endblock %}

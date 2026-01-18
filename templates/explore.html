@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Hidden Japan — Explore{% endblock %}
+{% block page_class %}explore-bg{% endblock %}
+
+{% block body %}
+
+<div class="cards-container">
+  {% for product in products %}
+  <div class="card1">
+    <img src="{{ url_for('static', filename='images/' + product.img) }}" class="card1-image">
+    <div class="card-overlay1"></div>
+
+    <div class="card-content1">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.subtitle }}</p>
+
+      <div class="buttons-container">
+          <div class="button-wrapper">
+            <a href="{{ url_for('seemore') }}" class="neon-btn">SEE MORE</a>
+          </div>
+
+          {% if current_user.is_authenticated and current_user.role == "admin" %}
+            <div class="delete-wrapper">
+                <a href="{{ url_for('delete_product', product_id=product.id) }}"
+                   class="delete-btn"
+                   onclick="return confirm('Are you sure?');">
+                   DELETE
+                </a>
+            </div>
+          {% endif %}
+      </div>
+
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

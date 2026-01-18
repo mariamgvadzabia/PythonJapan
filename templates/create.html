@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <div class="container mt-5">
+
+    <form class="reg1" enctype="multipart/form-data" method="POST">
+        {{ form.hidden_tag() }}
+
+
+        <div class="regis1">
+            <div class="regis1-row mt-2">
+                {{ form.name(placeholder="Product Name", class_="form-control") }}
+            </div>
+
+            <div class="regis1-row mt-2">
+                {{ form.subtitle(placeholder="Enter Description (Subtitle)", class_="form-control") }}
+            </div>
+
+            <div class="regis1-row mt-2">
+                {{ form.category(class_="form-control") }}
+            </div>
+
+            <div class="regis1-row mt-2">
+                {{ form.img(placeholder="Product Image",class_="form-control", accept=".png, .jpg, .jpeg") }}
+            </div>
+
+            <div class="regis3 mt-2">
+                {{ form.submit(class="btn btn-danger", value="Add to Database") }}
+            </div>
+        </div>
+    </form>
+  </div>
+{% endblock %}

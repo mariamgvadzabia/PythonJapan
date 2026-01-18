@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block page_class %}main-bg{% endblock %}
+
+{% block body %}
+  <h1 class="hero-title">HIDDEN JAPAN</h1>
+  <p class="hero-subtitle">Discover Japan beyond the obvious.</p>
+  <div class="vertical-text">秘密の日本</div>
+
+    <div class="tbc-footer">
+      <a href="https://tbcbank.ge/ka/tbc-education" target="_blank">
+          <img src="{{ url_for('static', filename='images/tbc-logo.png') }}" alt="TBC Logo">
+      </a>
+  </div>
+    {% if role == "admin" %}
+  {% endif %}
+{% endblock %}

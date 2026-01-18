@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Hidden Japan — AI Guide{% endblock %}
+{% block page_class %}ai-bg{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+
+    <div class="chat-interface">
+
+        <div class="chat-header">
+            <h2 class="sakura-title">SAKURA AI </h2>
+            <p>Your guide to hidden Japan</p>
+        </div>
+
+        <div class="chat-history" id="chatBox">
+
+            {% if not answer %}
+            <div class="welcome-message">
+                <div class="ai-avatar-large">🌸</div>
+                <h3>How can I help you explore Japan today?</h3>
+            </div>
+            {% endif %}
+
+            {% if answer %}
+
+                <div class="message user-message">
+                    <div class="message-content">
+                        {{ form.question.data }}
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+
+                <div class="message ai-message">
+                    <div class="ai-avatar">🌸</div>
+                    <div class="message-content typewriter">
+                        {{ answer }}
+                    </div>
+                </div>
+
+            {% endif %}
+        </div>
+
+        <div class="chat-input-area">
+            <form method="post" class="chat-form">
+                {{ form.hidden_tag() }}
+
+                {{ form.question(class="chat-input", placeholder="Message Sakura AI...", autocomplete="off") }}
+
+                <button type="submit" class="send-btn">
+                    ➤
+                </button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var chatBox = document.getElementById("chatBox");
+    chatBox.scrollTop = chatBox.scrollHeight;
+</script>
+{% endblock %}
